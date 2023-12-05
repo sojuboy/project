@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TECHNOLOGY IN A BINARY WORLD</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+<!--Refreshes index.html after 180 seconds-->
+  <meta http-equiv="refresh" content="180;url=index.html">
+<!--Creates 3s fade-in animation-->
+  <style>
+    body {
+        animation: fadeInAnimation ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    div {height: 90vh; padding: 24pt; align-items: center;
+    }
+</style>
+</head>
+
+<body>
+    <ul>
+      <li><a href="modalTwo.html">NEXT</a></li>
+        <li><a href="video.html">BACK</a></li>
+        <li><a href="index.html">HOME</a></li>
+    <li style="float:left"><p>TECHNOLOGY IN A BINARY WORLD</li>
+  </ul>
+
+    <br>
+
+    <div class="flex-container">
+      <div text-align="center">
+        <!-- Trigger/Open The Modal -->
+        <br>
+        <p4><b><u>ABSTRACT</u></b></p4>
+        <p style="font-size:14pt;">As said in “The Cyborg Manifesto,” the cyborg is a rejection of societal standards, the index case of a post-gender world, and a creature of both social reality and fiction.</p>
+        <p style="font-size:14pt;">Author Donna Haraway vocalizes the need for the altering of the societal concept of gender, separating it from a Western patriarchal lens, in order to instead connect it to “the utopian dream of the hope for a monstrous world without gender.”</p>
+        <p style="font-size:14pt;">...</p>
+        <button class="button-main" id="myBtn">LEARN MORE!</button>
+    </div>
+
+      <div>
+        <img src="suicideCable.jpg" class="img-responsive" width="80%" style = "border: #000000 2px solid" alt= "Female outlet" >
+        <p style="font-size:12pt;">A dangerous double-ended male connector, known as a "suicide cable."</p>
+      </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <p4><b><u>ABSTRACT</u></b></p4>
+        <p style="font-size:14pt;">As said in “The Cyborg Manifesto,” the cyborg is a rejection of societal standards, the index case of a post-gender world, and a creature of both social reality and fiction.</p>
+        <p style="font-size:14pt;">Author Donna Haraway vocalizes the need for the altering of the societal concept of gender, separating it from a Western patriarchal lens, in order to instead connect it to “the utopian dream of the hope for a monstrous world without gender.”</p>
+        <p style="font-size:14pt;">This gendered lens with a western, patriarchal view has been historically reinforced through political and social means, thus continuing to support the foundation of the heterosexual matrix; an invisible, contingent force that confines humans to either male or female.</p>
+        <p style="font-size:14pt;">It is by way of the cyborg that humanity can be expanded beyond current biological, structural, and social constraints. However, technology is not neutral and the use of technology in a way that allows humanity to leave behind the constraints of the natural body is not possible without first having an understanding of how users interact with biased tech.</p>
+        <p style="font-size:14pt;">It can be established that these predetermined notions of gender limit individual and technological power. Especially when the technologists in charge, those who determine the rules of technological advancement, do not have the interests of people outside of the binary in mind.</p>
+          <span class="close"><button class="button-main">Close</button></span>
+      </div>
+    </div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+  <!-- Stops video/audio from playing on modal close -->
+  <script>
+  $(function(){
+  $("body").on('hidden.bs.modal', function (e) {
+  var $iframes = $(e.target).find("iframe");
+  $iframes.each(function(index, iframe){
+  $(iframe).attr("src", $(iframe).attr("src"));
+  });
+  });
+  });
+  </script>
+
+
+</body>
+</html>

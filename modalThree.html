@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TECHNOLOGY IN A BINARY WORLD</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+<!--Refreshes index.html after 180 seconds-->
+  <meta http-equiv="refresh" content="180;url=index.html">
+<!--Creates 3s fade-in animation-->
+  <style>
+    body {
+        animation: fadeInAnimation ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    div {height: 90vh; padding: 24pt; align-items: center;
+    }
+  
+</style>
+</head>
+
+<body>
+    <ul>
+      <li><a href="modal.html">NEXT</a></li>
+        <li><a href="video.html">BACK</a></li>
+        <li><a href="index.html">HOME</a></li>
+    <li style="float:left"><p>TECHNOLOGY IN A BINARY WORLD</li>
+  </ul>
+
+    <br>
+
+    <div class="flex-container">
+      <div text-align="center">
+        <!-- Trigger/Open The Modal -->
+        <br>
+        <p4><b><u>THE OTHER SIDE</u></b></p4>
+        <p style="font-size:12pt;">Technology’s potential for positive ramifications within the queer community are nearly limitless. New methods of gender exploration and expression are made feasible through various technological means: music, body modification, digital identities, character creation (ex. VRChat), and digital subcultures. At its best, technology can be considered a major pillar for the queer community.</p>
+        <button class="button-main" id="myBtn">LEARN MORE!</button>
+    </div>
+
+      <div>
+        <img src="simsCreator.jpg" class="img-responsive" width="100%" style = "border: #000000 2px solid" alt="Image" >
+        <p style="font-size:12pt;"><i>Sims character customizer</i>.</p>
+      </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <p style="font-size:12pt;">Technology’s potential for positive ramifications within the queer community are nearly limitless. New methods of gender exploration and expression are made feasible through various technological means: music, body modification, digital identities, character creation (ex. VRChat), and digital subcultures. At its best, technology can be considered a major pillar for the queer community.</p>
+        <p style="font-size:12pt;">Hyperpop, and other various forms of computer music provides musicians a way to truly “perform” gender. With the idolization of hyper-feminine ‘pop princesses’ setting the pace for desired womanhood, computer music offers a way for transfemme artists to express their gender in a way that is empowering for them. </p>
+        <p style="font-size:12pt;">Through virtual reality, humans are allowed to express their identity and gender in a way that was not previously allotted. Avatar creation, role-adoption, and various dynamic social interactions can all be a fulfilling form of gender expression. VR allows people to actualize the version of themselves both digitally and in reality, within some capacity. The virtual body can give people the confidence to reflect their preferred characteristics of their virtual self in real life. Or it can simply function as a form of escapism from the binary constraints in the real world.</p>
+        <p style="font-size:12pt;">Transhumanism underscores the simple fact that body modification is liberating for an individual. Whether it is done to express gender, some sort of group affiliation, occupation, or the acceptance or rejection of social norms, the ability to adjust the body to one’s liking in society transfers more power to the individual. Although we have this ability now, as technology advances our methods to “customize” our bodies, transhumanism offers a wider range of capabilities in this sense. </p>
+        <p style="font-size:12pt;">The ability to curate a digital environment or entity that mirrors one’s inner self sets the stage for a level of comfort that empowers people to really delve into their true self and exhibit those traits. In relation to gender, or queerness, this ease permits for a true expression of one’s self through digital means, as the limitations that exist within society can be evicted from a carefully curated online bubble.</p>
+        <span class="close"><button class="button-main">Close</button></span>
+      </div>
+
+    </div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+  <!-- Stops video/audio from playing on modal close -->
+  <script>
+  $(function(){
+  $("body").on('hidden.bs.modal', function (e) {
+  var $iframes = $(e.target).find("iframe");
+  $iframes.each(function(index, iframe){
+  $(iframe).attr("src", $(iframe).attr("src"));
+  });
+  });
+  });
+  </script>
+
+
+</body>
+</html>
